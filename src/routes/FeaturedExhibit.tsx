@@ -1,9 +1,9 @@
-import styles from "../styles/pages.module.css";
+import Page from "../partials/Page";
 
 export default function FeaturedExhibit() {
   return (
-    <div className={styles.content}>
+    <Page>
       <h1>Featured Exhibit</h1>
-    </div>
+    </Page>
   );
 }

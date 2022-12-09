@@ -1,9 +1,9 @@
 import Page from "../partials/Page";
 
-export default function Root() {
+export default function Blog() {
   return (
     <Page>
-      <h1>Home</h1>
+      <h1>Blog</h1>
     </Page>
   );
 }

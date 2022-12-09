@@ -1,13 +1,16 @@
-.header {
-  background-color: #000;
-  color: #fff;
-  padding: 10px;
+.header,
+.footer {
+  padding: 20px;
   text-align: center;
+  background-color: #e0e0e0;
 }
 
-.footer {
-  background-color: #000;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header nav a {
+  margin: 0 5px;
+  padding: 5px;
 }
