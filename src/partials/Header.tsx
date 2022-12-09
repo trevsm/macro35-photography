@@ -1,9 +1,11 @@
-import styles from "./partials.module.css";
+import styles from "../styles/partials.module.css";
 
 export default function Header() {
   return (
     <header className={styles.header}>
-      <p>header</p>
+      <nav>
+        <a href="/">home</a>
+      </nav>
     </header>
   );
 }
