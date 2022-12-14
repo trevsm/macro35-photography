@@ -135,7 +135,7 @@ const GetNotified = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     p {
       max-width: 400px;
     }
