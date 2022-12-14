@@ -2,8 +2,14 @@ import styled from "styled-components";
 import Page from "../partials/Page";
 import { Content } from "../styles";
 import { device } from "../styles/media";
-import Mushrooms from "../assets/mushrooms2.png";
 import Spacer from "../partials/Spacer";
+import FeaturedCard from "../components/FeaturedCard";
+
+import Mushrooms from "../assets/mushrooms2.png";
+import Typewriter from "../assets/typewriter.png";
+import Bear from "../assets/bear.png";
+import Woodlands from "../assets/woodlands.png";
+import Camera from "../assets/camera.png";
 
 const Top = styled.div`
   position: relative;
@@ -115,9 +121,40 @@ const Center = styled.div`
   .upcoming {
     font-size: 24px;
   }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
 `;
 
 export default function Root() {
+  const featured = [
+    {
+      title: "Automata",
+      start: new Date(),
+      end: new Date(),
+      image: Camera,
+    },
+    {
+      title: "Toy Chest",
+      start: new Date(),
+      end: new Date(),
+      image: Bear,
+    },
+    {
+      title: "Woodlands",
+      start: new Date(),
+      end: new Date(),
+      image: Woodlands,
+    },
+    {
+      title: "Typewriter",
+      start: new Date(),
+      end: new Date(),
+      image: Typewriter,
+    },
+  ];
+
   return (
     <Page header={{ offset: false, transparentBg: true }}>
       <Top>
@@ -149,6 +186,17 @@ export default function Root() {
           </p>
           <Spacer s={3} />
           <p className="upcoming">Upcoming</p>
+          <div className="cards">
+            {featured.map((f, index) => (
+              <FeaturedCard
+                key={index}
+                title={f.title}
+                start={f.start}
+                end={f.end}
+                image={f.image}
+              />
+            ))}
+          </div>
         </Content>
       </Center>
     </Page>
