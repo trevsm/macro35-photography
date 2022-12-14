@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/macro35-photography/static/css/main.d6f0ff9a.css",
-    "main.js": "/macro35-photography/static/js/main.5695bd33.js",
+    "main.css": "/macro35-photography/static/css/main.69968385.css",
+    "main.js": "/macro35-photography/static/js/main.6981a799.js",
+    "static/media/mushrooms2.png": "/macro35-photography/static/media/mushrooms2.81c92f9c3f5af665c876.png",
+    "static/media/woodlands.png": "/macro35-photography/static/media/woodlands.99ef9612e7d18fb05c54.png",
+    "static/media/camera.png": "/macro35-photography/static/media/camera.cfe6e64e5074764ea57b.png",
+    "static/media/bear.png": "/macro35-photography/static/media/bear.5ee861169fb2d8773b41.png",
+    "static/media/typewriter.png": "/macro35-photography/static/media/typewriter.5805a916b17e24c8130e.png",
     "index.html": "/macro35-photography/index.html",
-    "main.d6f0ff9a.css.map": "/macro35-photography/static/css/main.d6f0ff9a.css.map",
-    "main.5695bd33.js.map": "/macro35-photography/static/js/main.5695bd33.js.map"
+    "main.69968385.css.map": "/macro35-photography/static/css/main.69968385.css.map",
+    "main.6981a799.js.map": "/macro35-photography/static/js/main.6981a799.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6f0ff9a.css",
-    "static/js/main.5695bd33.js"
+    "static/css/main.69968385.css",
+    "static/js/main.6981a799.js"
   ]
 }
