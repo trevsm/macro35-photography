@@ -11,14 +11,31 @@ const StyledFooter = styled.footer`
   * {
     color: white;
   }
+  .links,
+  .location,
+  .contact {
+    padding: 2rem;
+    min-width: 250px;
+  }
+
   .content {
     position: relative;
     padding: 5rem 0;
     padding-bottom: 8rem;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
   }
+
+  .flex {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    width: fit-content;
+  }
+
   h4 {
     border-bottom: 1px solid white;
     width: fit-content;
@@ -64,34 +81,34 @@ export default function Footer() {
   return (
     <StyledFooter>
       <Content>
-        <Spacer />
-        <div className="logo">MACRO35</div>
-        <div className="links">
-          <h4>Links</h4>
-          {routeLinks}
-        </div>
-        <div className="right">
-          <div className="location">
-            <h4>Studio Location</h4>
+        <div className="flex">
+          <div className="logo">MACRO35</div>
+          <div className="links">
+            <h4>Links</h4>
+            {routeLinks}
+          </div>
+          <div className="right">
+            <div className="location">
+              <h4>Studio Location</h4>
+              <p>
+                123 Glover Lane <br />
+                Miniville, UT 83015 <br />
+                <a href="https://goo.gl/maps"> View on Map</a>
+              </p>
+            </div>
+          </div>
+          <div className="contact">
+            <h4>Contact</h4>
             <p>
-              123 Glover Lane <br />
-              Miniville, UT 83015 <br />
-              <a href="https://goo.gl/maps"> View on Map</a>
+              Tel: +1 (801) 901-2345 <br />
+              Fax: +1 (801) 901-2345 <br />
+              Email: hello@macro35.com <br />
             </p>
           </div>
+          <div className="copyright">
+            &copy; {new Date().getFullYear()} Macro35. All rights reserved.
+          </div>
         </div>
-        <div className="contact">
-          <h4>Contact</h4>
-          <p>
-            Tel: +1 (801) 901-2345 <br />
-            Fax: +1 (801) 901-2345 <br />
-            Email: hello@macro35.com <br />
-          </p>
-        </div>
-        <div className="copyright">
-          &copy; {new Date().getFullYear()} Macro35. All rights reserved.
-        </div>
-        <Spacer />
       </Content>
     </StyledFooter>
   );
