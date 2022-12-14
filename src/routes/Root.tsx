@@ -18,7 +18,29 @@ const Top = styled.div`
 
   color: white;
 
+  h1 {
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 80px;
+    margin: 0;
+  }
+
+  p {
+    font-size: 25px;
+  }
+
+  button {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    font-size: 20px;
+    padding: 1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 0 0 2px white;
+  }
+
   .content {
+    padding: 3rem 6rem;
     position: relative;
     z-index: 1;
   }
@@ -31,23 +53,43 @@ const Top = styled.div`
     right: 0;
     width: 100%;
     height: 100%;
-    box-shadow: inset 0 0 200px rgba(1, 1, 1, 0.3);
+    box-shadow: inset 0 0 200px rgba(1, 1, 1, 0.8);
     margin: 0 auto;
   }
 
   ${device({
+    mobileStyles: /*css*/ `
+      h1 {
+        font-size: 40px;
+        line-height: 60px;
+      }
+      p {
+        font-size: 20px;
+      }
+      button {
+        font-size: 16px;
+        padding: 1rem;
+      }
+    `,
     tabletStyles: /*css*/ `
-      background-size: cover;
+      .content {
+        padding: 3rem 2rem;
+      }
     `,
   })}
 `;
-
 export default function Root() {
   return (
     <Page header={{ offset: false, transparentBg: true }}>
       <Top>
         <Content>
-          <h1>Home</h1>
+          <p>NEW</p>
+          <h1>
+            <i>
+              Uncover <br /> The <br /> Microcosm
+            </i>
+          </h1>
+          <button>View Exhibit</button>
         </Content>
         <div className="shadow"></div>
       </Top>

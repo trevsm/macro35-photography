@@ -15,6 +15,8 @@ const HeaderContainer = styled.header`
   nav a {
     margin-left: 0.5rem;
     padding: 0.5rem;
+    color: white;
+    text-decoration: none;
   }
 `;
 
@@ -47,8 +49,6 @@ export default function Header({
 
   useEffect(() => {
     if (headerRef.current) {
-      console.log(headerRef.current.offsetHeight);
-
       setHeaderHeight(headerRef.current.clientHeight);
     }
   }, []);
