@@ -112,6 +112,9 @@ const Center = styled.div`
   .description {
     max-width: 850px;
   }
+  .upcoming {
+    font-size: 24px;
+  }
 `;
 
 export default function Root() {
@@ -144,6 +147,8 @@ export default function Root() {
             exhibits. All exhibits are available both online AND in-person Thank
             you for your interest, and we hope you enjoy.
           </p>
+          <Spacer s={3} />
+          <p className="upcoming">Upcoming</p>
         </Content>
       </Center>
     </Page>
