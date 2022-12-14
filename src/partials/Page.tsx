@@ -11,7 +11,7 @@ export default function Page({
 }: {
   header?: {
     offset?: boolean;
-    transparentBg?: boolean;
+    staticBg?: boolean;
   };
   offsetHeader?: boolean;
   children: React.ReactNode;
@@ -21,14 +21,11 @@ export default function Page({
   const mainStyle =
     header?.offset == undefined ? { paddingTop: headerHeight + "px" } : {};
 
-  const setHeight = header?.offset ? setHeaderHeight : () => null;
+  const setHeight = !header?.offset ? setHeaderHeight : () => null;
 
   return (
     <div className="App">
-      <Header
-        setHeaderHeight={setHeaderHeight}
-        background={header?.transparentBg ? "transparent" : "grey"}
-      />
+      <Header setHeaderHeight={setHeight} staticBg={header?.staticBg} />
       <Main style={mainStyle}>{children}</Main>
       <Footer />
     </div>

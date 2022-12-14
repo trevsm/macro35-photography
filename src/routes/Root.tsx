@@ -156,7 +156,7 @@ export default function Root() {
   ];
 
   return (
-    <Page header={{ offset: false, transparentBg: true }}>
+    <Page header={{ offset: false }}>
       <Top>
         <Content>
           <p>NEW</p>

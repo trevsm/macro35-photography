@@ -5,6 +5,14 @@ import { Content } from "../styles";
 import styled from "styled-components";
 
 const HeaderContainer = styled.header`
+  .fixed {
+    width: 100%;
+    background: transparent;
+    transition: background 0.2s ease;
+  }
+  .scrolled.fixed {
+    background: rgb(28, 28, 28) !important;
+  }
   .content {
     display: flex;
     justify-content: space-between;
@@ -13,9 +21,6 @@ const HeaderContainer = styled.header`
     font-size: 1.5rem;
     text-decoration: none;
     color: white;
-  }
-  .fixed {
-    width: 100%;
   }
   nav a {
     margin-left: 0.5rem;
@@ -33,10 +38,10 @@ const FixedContainer = styled.div.attrs({ className: "fixed" })`
 
 export default function Header({
   setHeaderHeight,
-  background = "grey",
+  staticBg,
 }: {
   setHeaderHeight: (height: number) => void;
-  background?: string;
+  staticBg?: boolean;
 }) {
   const routeLinks = useMemo(
     () =>
@@ -56,11 +61,34 @@ export default function Header({
     if (headerRef.current) {
       setHeaderHeight(headerRef.current.clientHeight);
     }
+
+    if (window.scrollY > 100) {
+      headerRef.current?.classList.add("scrolled");
+    }
+
+    return () => {
+      // watch window for scroll  events
+      window.addEventListener("scroll", () => {
+        if (staticBg) return;
+        // if the window is scrolled down more than 100px
+        if (window.scrollY > 100) {
+          // add the class 'scrolled' to the header
+          headerRef.current?.classList.add("scrolled");
+        } else if (headerRef.current?.classList.contains("scrolled")) {
+          // remove the class 'scrolled' from the header
+          headerRef.current?.classList.remove("scrolled");
+        }
+      });
+    };
   }, []);
+
+  const staticBackground = {
+    background: "rgb(28, 28, 28)",
+  };
 
   return (
     <HeaderContainer>
-      <FixedContainer style={{ background }} ref={headerRef}>
+      <FixedContainer ref={headerRef} style={staticBg ? staticBackground : {}}>
         <Content>
           <Link to="/" className="logo">
             MACRO35
