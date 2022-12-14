@@ -1,12 +1,33 @@
-import { Content } from "../styles";
+import { useState } from "react";
+import styled from "styled-components";
 import Footer from "./Footer";
 import Header from "./Header";
 
-export default function Page({ children }: { children: React.ReactNode }) {
+const Main = styled.main``;
+
+export default function Page({
+  header,
+  children,
+}: {
+  header?: {
+    offset?: boolean;
+    transparentBg?: boolean;
+  };
+  offsetHeader?: boolean;
+  children: React.ReactNode;
+}) {
+  const [headerHeight, setHeaderHeight] = useState(0);
+
+  const mainStyle =
+    header?.offset == undefined ? { paddingTop: headerHeight + "px" } : {};
+
   return (
     <div className="App">
-      <Header />
-      <Content>{children}</Content>
+      <Header
+        setHeaderHeight={setHeaderHeight}
+        background={header?.transparentBg ? "transparent" : "grey"}
+      />
+      <Main style={mainStyle}>{children}</Main>
       <Footer />
     </div>
   );

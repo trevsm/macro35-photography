@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { routes } from "../routes";
 import { Content } from "../styles";
 import styled from "styled-components";
@@ -9,13 +9,28 @@ const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
   }
+  .fixed {
+    width: 100%;
+  }
   nav a {
     margin-left: 0.5rem;
     padding: 0.5rem;
   }
 `;
 
-export default function Header() {
+const FixedContainer = styled.div.attrs({ className: "fixed" })`
+  position: fixed;
+  top: 0;
+  z-index: 2;
+`;
+
+export default function Header({
+  setHeaderHeight,
+  background = "grey",
+}: {
+  setHeaderHeight: (height: number) => void;
+  background?: string;
+}) {
   const routeLinks = useMemo(
     () =>
       routes.map((route) =>
@@ -28,14 +43,26 @@ export default function Header() {
     [routes]
   );
 
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (headerRef.current) {
+      console.log(headerRef.current.offsetHeight);
+
+      setHeaderHeight(headerRef.current.clientHeight);
+    }
+  }, []);
+
   return (
     <HeaderContainer>
-      <Content>
-        <div>
-          <Link to="/">Logo</Link>
-        </div>
-        <nav>{routeLinks}</nav>
-      </Content>
+      <FixedContainer style={{ background }} ref={headerRef}>
+        <Content>
+          <div>
+            <Link to="/">Logo</Link>
+          </div>
+          <nav>{routeLinks}</nav>
+        </Content>
+      </FixedContainer>
     </HeaderContainer>
   );
 }

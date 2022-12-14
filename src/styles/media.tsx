@@ -16,7 +16,7 @@ const desktop = (styles: string) => /*css*/ `
   }
 `;
 
-export const media = ({
+export const device = ({
   mobileStyles,
   tabletStyles,
   desktopStyles,
@@ -29,3 +29,20 @@ export const media = ({
   ${tabletStyles ? tablet(tabletStyles) : ""}
   ${mobileStyles ? mobile(mobileStyles) : ""}
 `;
+
+//usage
+// import { media } from "../styles/media";
+//
+// const StyledDiv = styled.div`
+//   ${media({
+//     mobileStyles: `
+//       background: red;
+//     `,
+//     tabletStyles: `
+//       background: blue;
+//     `,
+//     desktopStyles: `
+//       background: green;
+//     `,
+//   })}
+// `;
