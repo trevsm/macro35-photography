@@ -8,9 +8,24 @@ html {
   margin: 0;
   padding: 0;
 }
+h1 {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 80px;
+  margin: 0;
+}
 
-body {
-  font-family: "Inter", sans-serif;
+h2 {
+  font-family: "Imprima", serif;
+  font-weight: 100;
+  font-size: 40px;
+}
+
+p,
+button {
+  font-family: "Istok Web", sans-serif;
+  font-size: 20px;
 }
 
 .limit {

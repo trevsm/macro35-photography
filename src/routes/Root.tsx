@@ -3,6 +3,7 @@ import Page from "../partials/Page";
 import { Content } from "../styles";
 import { device } from "../styles/media";
 import Mushrooms from "../assets/mushrooms2.png";
+import Spacer from "../partials/Spacer";
 
 const Top = styled.div`
   position: relative;
@@ -14,16 +15,9 @@ const Top = styled.div`
   background-position: center top;
   color: white;
 
-  h1 {
-    font-family: "Merriweather", serif;
-    font-weight: bold;
-    font-size: 60px;
-    line-height: 80px;
-    margin: 0;
-  }
   h1,
   p {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 
   p {
@@ -33,15 +27,38 @@ const Top = styled.div`
     line-height: 2;
   }
 
+  .tag {
+    max-width: 500px;
+  }
+
   button {
     margin-top: 2rem;
     margin-bottom: 5rem;
     font-size: 20px;
-    padding: 0.75rem 1.25rem;
+    padding: 1rem 2rem;
     letter-spacing: 1px;
     border: 3px solid white;
     color: #2a2753;
     border-radius: 100px;
+    box-shadow: 0 0 0 white, 0 0 0 white;
+    transition: all 0.2s ease;
+  }
+
+  button:hover {
+    animation: pulse 1s infinite forwards;
+    text-decoration: underline;
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 white, 0 0 0 white;
+    }
+    50% {
+      box-shadow: 0 0 4px white, 0 0 8px white;
+    }
+    100% {
+      box-shadow: 0 0 0 white, 0 0 0 white;
+    }
   }
 
   .content {
@@ -88,6 +105,15 @@ const Top = styled.div`
     `,
   })}
 `;
+
+const Center = styled.div`
+  .pretag {
+  }
+  .description {
+    max-width: 850px;
+  }
+`;
+
 export default function Root() {
   return (
     <Page header={{ offset: false, transparentBg: true }}>
@@ -96,20 +122,30 @@ export default function Root() {
           <p>NEW</p>
           <h1>
             <i>
-              Uncover The <br /> Microcosm
+              Uncover <br /> The <br /> Microcosm
             </i>
           </h1>
-          <p>
-            Discover the intricate details of the world around <br /> us through
-            the lens of a camera
+          <p className="tag">
+            With a camera, we can uncover and explore this detailed world that
+            exists within the larger world around us.
           </p>
           <button>Enter Exhibit</button>
         </Content>
         <div className="shadow"></div>
       </Top>
-      <Content>
-        <h2>Subheading</h2>
-      </Content>
+      <Spacer s={4} />
+      <Center>
+        <Content>
+          <p className="pretag">Keep Reading</p>
+          <h2>Online & Studio Exhibits</h2>
+          <p className="description">
+            We release new exhibits every month. Check back often to see
+            what&lsquo;s new. At the moment, we offer both online and in-studio
+            exhibits. All exhibits are available both online AND in-person Thank
+            you for your interest, and we hope you enjoy.
+          </p>
+        </Content>
+      </Center>
     </Page>
   );
 }
