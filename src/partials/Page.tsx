@@ -21,6 +21,8 @@ export default function Page({
   const mainStyle =
     header?.offset == undefined ? { paddingTop: headerHeight + "px" } : {};
 
+  const setHeight = header?.offset ? setHeaderHeight : () => null;
+
   return (
     <div className="App">
       <Header

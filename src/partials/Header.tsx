@@ -9,6 +9,11 @@ const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
   }
+  .logo {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+  }
   .fixed {
     width: 100%;
   }
@@ -57,9 +62,9 @@ export default function Header({
     <HeaderContainer>
       <FixedContainer style={{ background }} ref={headerRef}>
         <Content>
-          <div>
-            <Link to="/">Logo</Link>
-          </div>
+          <Link to="/" className="logo">
+            MACRO35
+          </Link>
           <nav>{routeLinks}</nav>
         </Content>
       </FixedContainer>
