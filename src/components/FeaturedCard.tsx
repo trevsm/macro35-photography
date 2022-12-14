@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Spacer from "../partials/Spacer";
 
 interface FeatureCardsProps {
   title: string;
@@ -95,6 +96,7 @@ export default function FeaturedCard({
         <h3>{title}</h3>
         <p>Starts: {start.toLocaleDateString()}</p>
         <p>Ends: {end.toLocaleDateString()}</p>
+        <Spacer s={1} />
         <button>asdf</button>
         <button>asdf</button>
       </div>

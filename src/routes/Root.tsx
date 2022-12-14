@@ -131,27 +131,27 @@ export default function Root() {
   const featured = [
     {
       title: "Automata",
-      start: new Date(),
-      end: new Date(),
+      start: new Date(2022, 10, 1),
+      end: new Date(2022, 10, 25),
       image: Camera,
     },
     {
       title: "Toy Chest",
-      start: new Date(),
-      end: new Date(),
+      start: new Date(2022, 11, 15),
+      end: new Date(2022, 11, 31),
       image: Bear,
     },
     {
-      title: "Woodlands",
-      start: new Date(),
-      end: new Date(),
-      image: Woodlands,
+      title: "Office Space",
+      start: new Date(2023, 1, 1),
+      end: new Date(2023, 1, 31),
+      image: Typewriter,
     },
     {
-      title: "Typewriter",
-      start: new Date(),
-      end: new Date(),
-      image: Typewriter,
+      title: "Woodlands",
+      start: new Date(2023, 3, 15),
+      end: new Date(2023, 3, 31),
+      image: Woodlands,
     },
   ];
 
