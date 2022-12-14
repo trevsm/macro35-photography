@@ -230,6 +230,7 @@ export default function Root() {
           </div>
         </Content>
       </Center>
+      <Spacer s={4} />
       <GetNotified>
         <Content>
           <div>
