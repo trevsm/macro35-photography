@@ -127,6 +127,37 @@ const Center = styled.div`
   }
 `;
 
+const GetNotified = styled.div`
+  background: black;
+  color: white;
+  .content {
+    padding: 5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    p {
+      max-width: 400px;
+    }
+    form {
+      display: flex;
+      font-size: 20px;
+      button,
+      input {
+        border: none;
+        border-radius: 10px;
+        padding: 0.5rem 1rem;
+      }
+      input {
+        margin-right: 0.5rem;
+      }
+    }
+    div {
+      max-width: 500px;
+    }
+  }
+`;
+
 export default function Root() {
   const featured = [
     {
@@ -199,6 +230,25 @@ export default function Root() {
           </div>
         </Content>
       </Center>
+      <GetNotified>
+        <Content>
+          <div>
+            <h2>Get Notified</h2>
+            <p>
+              Join our mailing list to get notified about upcoming exhibits and
+              exciting new works.
+            </p>
+          </div>
+          <div>
+            <Spacer />
+            <form>
+              <input type="email" placeholder="Email" />
+              <button>Sign Up</button>
+            </form>
+            <p>We promise not to spam you. You can unsubscribe at any time.</p>
+          </div>
+        </Content>
+      </GetNotified>
     </Page>
   );
 }

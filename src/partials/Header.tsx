@@ -11,7 +11,7 @@ const HeaderContainer = styled.header`
     transition: background 0.2s ease;
   }
   .scrolled.fixed {
-    background: rgb(28, 28, 28) !important;
+    background: #000000eb !important;
   }
   .content {
     display: flex;
@@ -83,7 +83,7 @@ export default function Header({
   }, []);
 
   const staticBackground = {
-    background: "rgb(28, 28, 28)",
+    background: "#000000eb",
   };
 
   return (

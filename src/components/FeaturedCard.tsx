@@ -51,6 +51,9 @@ const StyledCard = styled.div<{ image: string }>`
     button {
       font-size: 24px;
       margin: 5px 2.5rem;
+      padding-left: 10px;
+      text-align: left;
+      box-shadow: 1px 1px 5px #00000036;
     }
 
     .bar {
@@ -67,7 +70,7 @@ const StyledCard = styled.div<{ image: string }>`
   }
 
   :hover .main {
-    transform: translateY(60px);
+    transform: translateY(30px);
   }
 
   .tag {
@@ -97,8 +100,8 @@ export default function FeaturedCard({
         <p>Starts: {start.toLocaleDateString()}</p>
         <p>Ends: {end.toLocaleDateString()}</p>
         <Spacer s={1} />
-        <button>asdf</button>
-        <button>asdf</button>
+        <button>Save Date</button>
+        <button>View Location</button>
       </div>
     </StyledCard>
   );
