@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Content } from "../styles";
 import { routes } from "../routes";
 import { useMemo } from "react";
-import Spacer from "./Spacer";
 
 const StyledFooter = styled.footer`
   background: #282828;
