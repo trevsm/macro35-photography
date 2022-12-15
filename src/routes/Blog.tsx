@@ -4,6 +4,7 @@ import PostCard from "../components/PostCard";
 import Page from "../partials/Page";
 import Spacer from "../partials/Spacer";
 import { Content } from "../styles";
+import { device } from "../styles/media";
 
 const Main = styled.main`
   .content {
@@ -11,8 +12,18 @@ const Main = styled.main`
     .previous {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
     }
   }
+  ${device({
+    desktopStyles: /*css*/ `
+      .content {
+        .featured, .previous {
+          justify-content: start;
+        }
+      }
+      `,
+  })}
 `;
 
 export default function Blog() {

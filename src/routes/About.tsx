@@ -5,11 +5,21 @@ import { Content } from "../styles";
 import { main } from "../assets";
 
 const Main = styled.main`
+  padding: 0 1rem;
   .top {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     .description {
       max-width: 600px;
+    }
+  }
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      margin-bottom: 0;
     }
   }
   img {
@@ -51,7 +61,7 @@ export default function About() {
         <Spacer s={5} />
         <Content>
           <div className="top">
-            <div>
+            <div className="profile">
               <img src={main.Profile} alt="Profile picture of Joseph Shmoe" />
               <h2>Joseph Shmo</h2>
               <p>Macro Photographer</p>

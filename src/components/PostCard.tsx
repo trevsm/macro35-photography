@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 const StyledCard = styled.div`
-  margin-bottom: 2rem;
-  margin-right: 1rem;
+  margin: 1rem;
   h3 {
     margin-top: 1rem;
   }

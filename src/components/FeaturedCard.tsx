@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Spacer from "../partials/Spacer";
 
@@ -90,6 +91,7 @@ export default function FeaturedCard({
   start,
   end,
 }: FeatureCardsProps) {
+  const navigate = useNavigate();
   return (
     <StyledCard image={image}>
       <div className="tag">{formatMonthDay(start)}</div>
@@ -101,7 +103,7 @@ export default function FeaturedCard({
         <p>Ends: {end.toLocaleDateString()}</p>
         <Spacer s={1} />
         <button>Save Date</button>
-        <button>View Location</button>
+        <button onClick={() => navigate("/about")}>View Location</button>
       </div>
     </StyledCard>
   );

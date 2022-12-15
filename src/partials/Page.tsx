@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -16,12 +17,17 @@ export default function Page({
   offsetHeader?: boolean;
   children: React.ReactNode;
 }) {
+  const { pathname } = useLocation();
   const [headerHeight, setHeaderHeight] = useState(0);
 
   const mainStyle =
     header?.offset == undefined ? { paddingTop: headerHeight + "px" } : {};
 
   const setHeight = !header?.offset ? setHeaderHeight : () => null;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <div className="App">
