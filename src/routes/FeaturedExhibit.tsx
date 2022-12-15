@@ -43,7 +43,7 @@ const Top = styled.div`
 
 export default function FeaturedExhibit() {
   return (
-    <Page header={{ staticBg: true }}>
+    <Page>
       <Top>
         <Spacer s={4} />
         <Content>

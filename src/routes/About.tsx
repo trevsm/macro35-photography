@@ -65,7 +65,7 @@ const Main = styled.main`
 
 export default function About() {
   return (
-    <Page header={{ staticBg: true }}>
+    <Page>
       <Main>
         <Spacer s={5} />
         <Content>

@@ -3,7 +3,7 @@ import { Content } from "../../styles";
 
 export default function NotFound() {
   return (
-    <Page header={{ staticBg: true }}>
+    <Page>
       <Content>
         <h1>Not Found</h1>
         <p>

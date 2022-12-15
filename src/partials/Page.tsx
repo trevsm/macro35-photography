@@ -12,7 +12,6 @@ export default function Page({
 }: {
   header?: {
     offset?: boolean;
-    staticBg?: boolean;
   };
   offsetHeader?: boolean;
   children: React.ReactNode;
@@ -31,7 +30,7 @@ export default function Page({
 
   return (
     <div className="App">
-      <Header setHeaderHeight={setHeight} staticBg={header?.staticBg} />
+      <Header setHeaderHeight={setHeight} />
       <Main style={mainStyle}>{children}</Main>
       <Footer />
     </div>

@@ -7,7 +7,7 @@ export default function ErrorPage() {
   console.error(error);
 
   return (
-    <Page header={{ staticBg: true }}>
+    <Page>
       <Content>
         <h1>Oops!</h1>
         <p>Sorry, an unexpected error has occurred.</p>

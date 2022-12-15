@@ -64,7 +64,7 @@ export default function Blog() {
     },
   ];
   return (
-    <Page header={{ staticBg: true }}>
+    <Page>
       <Main>
         <Content>
           <h2>Featured</h2>

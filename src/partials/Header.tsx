@@ -11,8 +11,6 @@ const HeaderContainer = styled.header`
     width: 100%;
     background: transparent;
     transition: background 0.2s ease;
-  }
-  .scrolled.fixed {
     background: #000000eb !important;
   }
   .content {
@@ -92,10 +90,8 @@ const ModalContainer = styled.div`
 
 export default function Header({
   setHeaderHeight,
-  staticBg,
 }: {
   setHeaderHeight: (height: number) => void;
-  staticBg?: boolean;
 }) {
   const { pathname } = useLocation();
 
@@ -123,34 +119,11 @@ export default function Header({
     if (headerRef.current) {
       setHeaderHeight(headerRef.current.clientHeight);
     }
-
-    if (window.scrollY > 100) {
-      headerRef.current?.classList.add("scrolled");
-    }
-
-    return () => {
-      // watch window for scroll  events
-      window.addEventListener("scroll", () => {
-        if (staticBg) return;
-        // if the window is scrolled down more than 100px
-        if (window.scrollY > 100) {
-          // add the class 'scrolled' to the header
-          headerRef.current?.classList.add("scrolled");
-        } else if (headerRef.current?.classList.contains("scrolled")) {
-          // remove the class 'scrolled' from the header
-          headerRef.current?.classList.remove("scrolled");
-        }
-      });
-    };
   }, []);
 
   useEffect(() => {
     if (showModal) setShowModal(false);
   }, [pathname]);
-
-  const staticBackground = {
-    background: "#000000eb",
-  };
 
   return (
     <>
@@ -161,10 +134,7 @@ export default function Header({
         </ModalContainer>
       )}
       <HeaderContainer>
-        <FixedContainer
-          ref={headerRef}
-          style={staticBg ? staticBackground : {}}
-        >
+        <FixedContainer ref={headerRef}>
           <Content>
             <Link to="/" className="logo">
               MACRO35
