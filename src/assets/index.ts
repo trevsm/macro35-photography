@@ -21,6 +21,13 @@ import Bear from './bear.png'
 
 import Profile from './profile 1.png'
 
+import Alaska from './alaska 1.png'
+import Antique from './antique 1.png'
+import Beach from './beach 1.png'
+import Blog from './blog1 1.png'
+import Cosmos from './cosmos 1.png'
+import Mushrooms1 from './mushrooms 1.png'
+
 export const mushrooms: {
   [key: string]: string
 } = {
@@ -50,4 +57,13 @@ export const featured = {
 export const main = {
   Mushrooms2,
   Profile,
+}
+
+export const posts = {
+  Alaska,
+  Antique,
+  Beach,
+  Blog,
+  Cosmos,
+  Mushrooms1,
 }
