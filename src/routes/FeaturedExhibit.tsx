@@ -45,9 +45,14 @@ export default function FeaturedExhibit() {
   return (
     <Page header={{ staticBg: true }}>
       <Top>
+        <Spacer s={4} />
         <Content>
           <div className="left">
-            <img src="" alt="" />
+            <img
+              src={mushrooms.Mushroom7}
+              alt="Thumbnail of a little blue mushroom."
+              style={{ borderRadius: "100px", width: "100px" }}
+            />
             <p className="pretag">Our Mysterious World:</p>
             <h1>Uncover the Microcosm</h1>
             <p className="date">10.01.22</p>

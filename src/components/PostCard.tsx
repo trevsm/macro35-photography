@@ -28,7 +28,7 @@ export default function PostCard({
     <StyledCard>
       <div className="main">
         <div className="image">
-          <img src={image} alt="" />
+          <img src={image} alt={title} />
         </div>
         <div className="content">
           <h3>{title}</h3>

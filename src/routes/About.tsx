@@ -52,7 +52,7 @@ export default function About() {
         <Content>
           <div className="top">
             <div>
-              <img src={main.Profile} alt="" />
+              <img src={main.Profile} alt="Profile picture of Joseph Shmoe" />
               <h2>Joseph Shmo</h2>
               <p>Macro Photographer</p>
             </div>

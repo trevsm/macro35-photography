@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { posts } from "../assets";
 import PostCard from "../components/PostCard";
 import Page from "../partials/Page";
+import Spacer from "../partials/Spacer";
 import { Content } from "../styles";
 
 const Main = styled.main`
@@ -68,6 +69,7 @@ export default function Blog() {
             ))}
           </div>
         </Content>
+        <Spacer s={4} />
       </Main>
     </Page>
   );
