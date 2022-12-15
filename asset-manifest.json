@@ -1,18 +1,39 @@
 {
   "files": {
     "main.css": "/macro35-photography/static/css/main.69968385.css",
-    "main.js": "/macro35-photography/static/js/main.b31c93e4.js",
+    "main.js": "/macro35-photography/static/js/main.97bf963d.js",
     "static/media/mushrooms2.png": "/macro35-photography/static/media/mushrooms2.81c92f9c3f5af665c876.png",
     "static/media/woodlands.png": "/macro35-photography/static/media/woodlands.99ef9612e7d18fb05c54.png",
     "static/media/camera.png": "/macro35-photography/static/media/camera.cfe6e64e5074764ea57b.png",
     "static/media/bear.png": "/macro35-photography/static/media/bear.5ee861169fb2d8773b41.png",
+    "static/media/profile 1.png": "/macro35-photography/static/media/profile 1.8433c275e9873ff3a970.png",
     "static/media/typewriter.png": "/macro35-photography/static/media/typewriter.5805a916b17e24c8130e.png",
+    "static/media/cosmos 1.png": "/macro35-photography/static/media/cosmos 1.8fa016ee9c014ee39056.png",
+    "static/media/antique 1.png": "/macro35-photography/static/media/antique 1.62dae2b8dd1b19627125.png",
+    "static/media/alaska 1.png": "/macro35-photography/static/media/alaska 1.780e509704c0d7fd117b.png",
+    "static/media/blog1 1.png": "/macro35-photography/static/media/blog1 1.fef702ca124a7ce98139.png",
+    "static/media/beach 1.png": "/macro35-photography/static/media/beach 1.d2bba45b56bcc5b5e657.png",
+    "static/media/mushrooms 1.png": "/macro35-photography/static/media/mushrooms 1.3b2febaeeb518543ba9e.png",
+    "static/media/mushroom4.png": "/macro35-photography/static/media/mushroom4.566f252bb0bb187cdf0e.png",
+    "static/media/mushroom8.png": "/macro35-photography/static/media/mushroom8.bdceb87418c8d9f576f3.png",
+    "static/media/mushroom5.png": "/macro35-photography/static/media/mushroom5.71d766daa5dd942bc75b.png",
+    "static/media/mushroom11.png": "/macro35-photography/static/media/mushroom11.d6b873bd1897aa4e072a.png",
+    "static/media/mushroom10.png": "/macro35-photography/static/media/mushroom10.228ef28c2bc702dadb80.png",
+    "static/media/mushroom12.png": "/macro35-photography/static/media/mushroom12.da7cb2e13bf6b495b847.png",
+    "static/media/mushroom7.png": "/macro35-photography/static/media/mushroom7.7cc3cf719b289b573a87.png",
+    "static/media/mushroom3.png": "/macro35-photography/static/media/mushroom3.0e13d838bc27cd98d71a.png",
+    "static/media/mushroom6.png": "/macro35-photography/static/media/mushroom6.c1e9fa25d08bc5e76050.png",
+    "static/media/mushroom9.png": "/macro35-photography/static/media/mushroom9.afa784a0d084e14f66de.png",
+    "static/media/mushroom1.png": "/macro35-photography/static/media/mushroom1.6185f91d17ae64bacad7.png",
+    "static/media/mushroom13.png": "/macro35-photography/static/media/mushroom13.1ad2fe5069f437bd3d26.png",
+    "static/media/mushroom2.png": "/macro35-photography/static/media/mushroom2.4c1efa7c654781bed2e3.png",
+    "static/media/mushroom14.png": "/macro35-photography/static/media/mushroom14.d8282c02865470fc2289.png",
     "index.html": "/macro35-photography/index.html",
     "main.69968385.css.map": "/macro35-photography/static/css/main.69968385.css.map",
-    "main.b31c93e4.js.map": "/macro35-photography/static/js/main.b31c93e4.js.map"
+    "main.97bf963d.js.map": "/macro35-photography/static/js/main.97bf963d.js.map"
   },
   "entrypoints": [
     "static/css/main.69968385.css",
-    "static/js/main.b31c93e4.js"
+    "static/js/main.97bf963d.js"
   ]
 }
