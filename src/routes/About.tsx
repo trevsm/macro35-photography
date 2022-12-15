@@ -3,6 +3,7 @@ import Page from "../partials/Page";
 import Spacer from "../partials/Spacer";
 import { Content } from "../styles";
 import { main } from "../assets";
+import { device } from "../styles/media";
 
 const Main = styled.main`
   padding: 0 1rem;
@@ -52,6 +53,14 @@ const Main = styled.main`
       height: 350px;
     }
   }
+
+  ${device({
+    mobileStyles: `
+        .info {
+          display: none;
+        }
+      `,
+  })}
 `;
 
 export default function About() {
