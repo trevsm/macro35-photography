@@ -20,6 +20,7 @@ import Camera from './camera.png'
 import Bear from './bear.png'
 
 import Profile from './profile 1.png'
+import MenuIcon from './Menu-icon.png'
 
 import Alaska from './alaska 1.png'
 import Antique from './antique 1.png'
@@ -57,6 +58,7 @@ export const featured = {
 export const main = {
   Mushrooms2,
   Profile,
+  MenuIcon,
 }
 
 export const posts = {
