@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/macro35-photography/static/css/main.69968385.css",
-    "main.js": "/macro35-photography/static/js/main.97bf963d.js",
+    "main.js": "/macro35-photography/static/js/main.da88d952.js",
     "static/media/mushrooms2.png": "/macro35-photography/static/media/mushrooms2.81c92f9c3f5af665c876.png",
     "static/media/woodlands.png": "/macro35-photography/static/media/woodlands.99ef9612e7d18fb05c54.png",
     "static/media/camera.png": "/macro35-photography/static/media/camera.cfe6e64e5074764ea57b.png",
@@ -30,10 +30,10 @@
     "static/media/mushroom14.png": "/macro35-photography/static/media/mushroom14.d8282c02865470fc2289.png",
     "index.html": "/macro35-photography/index.html",
     "main.69968385.css.map": "/macro35-photography/static/css/main.69968385.css.map",
-    "main.97bf963d.js.map": "/macro35-photography/static/js/main.97bf963d.js.map"
+    "main.da88d952.js.map": "/macro35-photography/static/js/main.da88d952.js.map"
   },
   "entrypoints": [
     "static/css/main.69968385.css",
-    "static/js/main.97bf963d.js"
+    "static/js/main.da88d952.js"
   ]
 }
