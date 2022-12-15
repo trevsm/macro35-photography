@@ -76,6 +76,7 @@ export default function FeaturedExhibit() {
               <img key={key} src={mushrooms[key]} alt={key} />
             ))}
           </div>
+          <Spacer s={4} />
         </Content>
       </Top>
     </Page>

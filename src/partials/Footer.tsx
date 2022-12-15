@@ -90,9 +90,9 @@ export default function Footer() {
             <div className="location">
               <h4>Studio Location</h4>
               <p>
-                123 Glover Lane <br />
-                Miniville, UT 83015 <br />
-                <a href="https://goo.gl/maps"> View on Map</a>
+                1234 Main St. <br />
+                San Francisco, CA 94105 <br />
+                <Link to="/about">View on map</Link>
               </p>
             </div>
           </div>

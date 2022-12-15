@@ -19,6 +19,8 @@ import Woodlands from './woodlands.png'
 import Camera from './camera.png'
 import Bear from './bear.png'
 
+import Profile from './profile 1.png'
+
 export const mushrooms: {
   [key: string]: string
 } = {
@@ -38,17 +40,14 @@ export const mushrooms: {
   Mushroom14,
 }
 
-export const featured: {
-  [key: string]: string
-} = {
+export const featured = {
   Typewriter,
   Woodlands,
   Camera,
   Bear,
 }
 
-export const main: {
-  [key: string]: string
-} = {
+export const main = {
   Mushrooms2,
+  Profile,
 }

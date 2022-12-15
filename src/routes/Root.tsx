@@ -10,6 +10,7 @@ import Typewriter from "../assets/typewriter.png";
 import Bear from "../assets/bear.png";
 import Woodlands from "../assets/woodlands.png";
 import Camera from "../assets/camera.png";
+import { useNavigate } from "react-router-dom";
 
 const Top = styled.div`
   position: relative;
@@ -186,6 +187,8 @@ export default function Root() {
     },
   ];
 
+  const navigate = useNavigate();
+
   return (
     <Page header={{ offset: false }}>
       <Top>
@@ -200,7 +203,7 @@ export default function Root() {
             With a camera, we can uncover and explore this detailed world that
             exists within the larger world around us.
           </p>
-          <button>Enter Exhibit</button>
+          <button onClick={() => navigate("/featured")}>Enter Exhibit</button>
         </Content>
         <div className="shadow"></div>
       </Top>

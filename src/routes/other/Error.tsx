@@ -1,5 +1,6 @@
 import { useRouteError } from "react-router-dom";
 import Page from "../../partials/Page";
+import { Content } from "../../styles";
 
 export default function ErrorPage() {
   const error: any = useRouteError();
@@ -7,11 +8,13 @@ export default function ErrorPage() {
 
   return (
     <Page header={{ staticBg: true }}>
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        <i>{error.statusText || error.message}</i>
-      </p>
+      <Content>
+        <h1>Oops!</h1>
+        <p>Sorry, an unexpected error has occurred.</p>
+        <p>
+          <i>{error.statusText || error.message}</i>
+        </p>
+      </Content>
     </Page>
   );
 }
